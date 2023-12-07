@@ -3,7 +3,7 @@ let details = null
 console.log(details);
 
 let number
-// undefined is a instance, where variable is declared but value is not intialised.
+// undefined is a instance, where variable is declared but value is not intializsed.
 console.log(number);
 
 
