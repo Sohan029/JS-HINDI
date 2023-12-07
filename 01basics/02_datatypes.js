@@ -6,6 +6,8 @@ let number
 // undefined is a instance, where variable is declared but value is not intializsed.
 console.log(number);
 
+// symbol used when uniqueness is requied.
+
 
 console.table([typeof details, typeof number]);
 
