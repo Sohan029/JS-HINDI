@@ -464,3 +464,4 @@ storyCol.addEventListener('click',function(det){
     
 })
 ```
+# ----------Completed----------
