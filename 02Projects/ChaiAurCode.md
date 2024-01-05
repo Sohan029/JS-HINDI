@@ -220,7 +220,7 @@ p {
 ```
 ## Java-Script :
 ```js
-const number = parseInt(Math.random()*100+1)
+let number = parseInt(Math.random()*100+1)
 
 let userInput = document.querySelector('.guessField')
 let submit = document.querySelector('.guessSubmit')
@@ -268,11 +268,11 @@ function validate(guess){
 
 function check(guess){
   if(guess < number){
-    displayMessage('Number is Low')
+    displayMessage('Entered Number is Low')
   }else if(guess > number){
-    displayMessage('Number is High')
+    displayMessage('Entered Number is High')
   }else if(guess === number){
-    displayMessage('Congrats !!, You Guessed Correctly')
+    displayMessage("Congrats !!, You've Guessed Correctly")
     endGame()
   }
 }
@@ -280,11 +280,13 @@ function check(guess){
 function cleaner(guess){
   userInput.value = ''
   previous.innerHTML += `${guess}, `
+  previous.style.color = 'black'
   remainig.innerHTML = `${10 - count}`
 }
 
 function displayMessage(message){
   lowOrHi.innerHTML = `<h3>${message}</h2>`
+  lowOrHi.style.color = 'orange'
 }
 
 function endGame(){
@@ -292,7 +294,7 @@ function endGame(){
   userInput.setAttribute('disabled','')
   previous.innerHTML = ''
   remainig.innerHTML = ''
-  repeatGame.innerHTML = 'Start-Again'
+  repeatGame.innerHTML = 'Restart'
   repeatGame.className = 'repeatGame'
   resultParas.appendChild(repeatGame)
   playGame = false
@@ -307,6 +309,7 @@ function newGame(){
     lowOrHi.innerHTML = ''
     remainig.innerHTML = `${11 - count}`
     resultParas.removeChild(repeatGame)
+    number = parseInt(Math.random()*100+1)
     playGame = true
   })
 }
