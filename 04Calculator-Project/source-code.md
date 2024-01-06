@@ -172,4 +172,9 @@ inputs.forEach(function(box){
     })
 })
 ```
+## Output :-
+
+![Screenshot (36)](https://github.com/Sohan029/JS-HINDI/assets/121715317/1e203efe-006a-4ed8-8954-8d8ce545fbfc)
+
+
 
